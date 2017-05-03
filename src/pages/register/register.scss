@@ -1,0 +1,14 @@
+page-register {
+	ion-content {
+		background-image: url('../../assets/icon/back.jpg');
+	}
+
+	ion-item {
+		opacity: 0.7;
+		border-radius: 5px;
+	}
+
+	.email {
+		margin-bottom: 10px;
+	}
+}

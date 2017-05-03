@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="menjarum">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal" (click)="pencarian()">
+        <ion-icon name="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Beranda</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="transaksi()">
+        <ion-icon name="md-git-compare"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-slides autoplay="5000" loop="true" speed="3000" pager="true">
+    <ion-slide *ngFor="let slide of dataSlide">
+      <img src="{{slide.image}}"/>
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-card>
+    <img src="assets/icon/home.jpg"/>
+    <div class="card-title">Bingung Cari Penjahit ?</div>
+    <div class="card-subtitle">Kami memiliki 1000 lebih penjahit kota Medan</div>
+    <button outline ion-button class="card-subtitle" id="button" color="menjarum" (click)="mulaiJahit()">Mulai Jahit</button>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/icon/home.jpg"/>
+    <div class="card-title">Semua Kategori</div>
+    <div class="card-subtitle">Kategori Jahitan menjarum.com</div>
+    <button ion-button outline class="card-subtitle" id="button" color="menjarum" (click)="tampilDesain()">Lihat</button>
+  </ion-card>
+
+  <!-- <ion-item>
+    <b item-left>Temukan Referensi Jahitmu</b>
+    <button ion-button clear item-right>Selengkapnya</button>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <img src="../../assets/icon/baju.jpg"/>
+          <b>Jas Penuh</b>
+        </div>
+
+        <div>
+          <img src="../../assets/icon/baju.jpg"/>
+          <b>Jas Penuh</b>
+        </div>
+
+      </ion-col>
+
+      <ion-col>
+        <div>
+          <img src="../../assets/icon/baju.jpg"/>
+          <b>Jas Penuh</b>
+        </div>
+
+        <div>
+          <img src="../../assets/icon/baju.jpg"/>
+          <b>Jas Penuh</b>
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid> -->
+
+</ion-content>

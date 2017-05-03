@@ -1,0 +1,69 @@
+<!--
+  Generated template for the Pembayaran page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="menjarum">
+    <ion-title>pembayaran</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item no-lines>
+		<h2>Rekening Menjarum</h2>
+	</ion-item>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+		        <div>
+		          <img src="assets/icon/mandiri.png"/><br>
+		          <b>A.N : Fajar Satria Akbar<br>
+		          	 Cabang : Medan Kota<br>
+		          	 Rekening : 1234.5678.9
+		          </b>
+		        </div>
+	      	</ion-col>
+	      	<ion-col>
+	      		<div>
+		          <img src="assets/icon/bri.png"/><br>
+		          <b>A.N : Fajar Satria Akbar<br>
+		          	 Cabang : Medan Kota<br>
+		          	 Rekening : 1234.5678.9
+		          </b>
+		        </div>
+	      	</ion-col>
+      	</ion-row>
+	</ion-grid>
+	<ion-item>
+		<ion-input type="text" placeholder="No. Invoice"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-input type="text" placeholder="Email"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-input type="text" placeholder="Telp/Hp"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label>Bank Anda</ion-label>
+		<ion-select [(ngModel)]="Bank">
+			<ion-option value="bri">BRI</ion-option>
+			<ion-option value="mandiri">Mandiri</ion-option>
+		</ion-select>
+	</ion-item>
+	<ion-item>
+		<ion-label>Dikirim ke</ion-label>
+		<ion-select [(ngModel)]="Bank">
+			<ion-option value="bri">BRI</ion-option>
+			<ion-option value="mandiri">Mandiri</ion-option>
+		</ion-select>
+	</ion-item>
+	<ion-item>
+		<ion-input type="number" placeholder="Jumlah Transfer"></ion-input>
+	</ion-item>
+	<button ion-button block color="menjarum">Kirim Konfirmasi</button>
+</ion-content>

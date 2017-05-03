@@ -1,0 +1,214 @@
+<!--
+  Generated template for the Desain page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="menjarum">
+    <ion-title>Proses Pesan</ion-title>
+    <ion-buttons end>
+      <button ion-button color="royal" (click)="tampilProfil()">
+        Referensi
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content no-bounce>
+
+	<ion-slides #mySlider initialSlide="0" (ionSlideDidChange)="onSlideChanged()">
+		<ion-slide>
+		<ion-content>
+			<ion-item>
+				<ion-input type="text" placeholder="Nama Project Jahit"></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Kategori</ion-label>
+				<ion-select [(ngModel)]="kategori">
+					<ion-option value="Atasan">Atasan</ion-option>
+					<ion-option value="Bawahan">Bawahan</ion-option>
+				</ion-select>
+			</ion-item>
+			
+      		<ion-item>
+				<ion-toolbar color="menjarum">
+					<ion-buttons>
+						<button ion-button icon-left>
+							<ion-icon name="camera"></ion-icon>Ambil Gambar
+						</button>
+						<button ion-button icon-left>
+							<ion-icon name="cloud-upload"></ion-icon>Upload
+						</button>
+					</ion-buttons>
+				</ion-toolbar>
+			</ion-item>
+
+			<ion-footer>
+				<button ion-button icon-left block (click)="goToNextSlide()">
+	      			Selanjutnya <ion-icon name="md-arrow-round-forward"></ion-icon>
+	      		</button>
+      		</ion-footer>
+
+			<img src="#" style="width: 50%" [hidden]="lastImage === null">
+			<h3 [hidden]="lastImage !== null">Gambar masih kosong!</h3>
+		</ion-content>
+
+		</ion-slide>
+		<ion-slide>
+			<ion-toolbar no-border-top color="menjarum">
+				<ion-segment [(ngModel)]="metode" color="light">
+				  <ion-segment-button value="pilih1" style="color: white">
+				    <p>Ukur Sendiri</p>
+				  </ion-segment-button>
+				  <ion-segment-button value="pilih2" style="color: white">
+				    <p>Ukur Standart</p>
+				  </ion-segment-button>
+				  <ion-segment-button value="pilih3" style="color: white">
+				    <p>Ukur Kelokasi</p>
+				  </ion-segment-button>
+				</ion-segment>
+			</ion-toolbar>
+			<ion-footer>
+	      		<button ion-button block icon-left (click)="goToNextSlide()">
+	      			Selanjutnya <ion-icon name="md-arrow-round-forward"></ion-icon>
+	      		</button>
+      		</ion-footer>
+			<ion-content>
+			<button ion-button clear icon-left (click)="goToPrevSlide()">
+				<ion-icon name="md-arrow-round-back"></ion-icon>Kembali
+			</button>
+
+      		<div [ngSwitch]="metode">
+			    <ion-list *ngSwitchCase="'pilih1'" padding>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Nama Lengkap Pemilik"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Panjang Pakaian"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Keliling Dada"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Keliling Lengan"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Lingkar Leher"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Keliling Pinggang"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Lebar Bahu"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			        <ion-input type="text" placeholder="Panjang Lengan"></ion-input>
+			        <ion-icon name="ios-eye" item-right color="menjarum"></ion-icon>
+			      </ion-item>
+			      <ion-item>
+			      	<button ion-button block color="menjarum">Tambahkan</button>
+			      </ion-item>
+			    </ion-list>
+
+			    <ion-list *ngSwitchCase="'pilih2'" padding>
+			      <p color="danger">*Minimum jumlah pemesanan 24 pics<br>
+			      	*Minimum jumlah pakaian dengan ukuran yang sama sebanyak 6 potong
+			      </p>
+			      <ion-item>
+			        <ion-label fixed>XS</ion-label>
+			        <ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>S</ion-label>
+			      	<ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>M</ion-label>
+			      	<ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>L</ion-label>
+			      	<ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>XL</ion-label>
+			      	<ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>XXL</ion-label>
+			      	<ion-input type="number"></ion-input>
+			      </ion-item>
+			      <ion-item>
+			      	<ion-label fixed>Jumlah</ion-label>
+			      	<ion-input disabled placeholder="0"></ion-input>
+			      </ion-item>
+			    </ion-list>
+
+			    <ion-list *ngSwitchCase="'pilih3'" padding>
+			      <ion-item>
+			      	<div #map id="map"></div>
+			      </ion-item>
+			    </ion-list>
+			  </div>
+			  </ion-content>
+
+		</ion-slide>
+
+		<ion-slide>
+		<ion-content padding>
+			<button ion-button clear icon-left (click)="goToPrevSlide()">
+				<ion-icon name="md-arrow-round-back"></ion-icon> Kembali
+			</button>
+			<ion-item>
+				<ion-input placeholder="Masukkan Harga Tawaran Anda ..."></ion-input>
+		 	</ion-item>
+		 	<ion-item no-lines color="danger">
+		 		Alamat Penerima
+		 	</ion-item>
+		 	<ion-item>
+		 		<ion-input placeholder="Nama Lengkap Penerima"></ion-input>
+		 	</ion-item>
+		 	<ion-item>
+		 		<ion-input placeholder="Alamat Lengkap"></ion-input>
+		 		<ion-icon name="md-locate" item-right color="danger"></ion-icon>
+		 	</ion-item>
+		 	<ion-item>
+		 		<ion-input placeholder="Provinsi"></ion-input>
+		 	</ion-item>
+		 	<ion-item>
+		 		<ion-input placeholder="Kabupaten"></ion-input>
+		 	</ion-item>
+		 	<ion-item>
+		 		<ion-input placeholder="Kecamatan"></ion-input>
+		 	</ion-item>
+		 	<ion-item no-lines color="danger">
+		 		Metode Pembayaran
+		 	</ion-item>
+		 	<ion-list radio-group>
+			  <ion-item>
+			  	<ion-label>Cicilan</ion-label>
+			  	<ion-radio color="danger" checked="true"></ion-radio>
+			  </ion-item>
+			  <ion-item>
+			  	<ion-label>Lunas</ion-label>
+			  	<ion-radio color="danger"></ion-radio>
+			  </ion-item>
+		  </ion-list>
+		  <button ion-button block color="menjarum">Pesan Sekarang</button>
+		</ion-content>
+		</ion-slide>
+
+	</ion-slides>
+
+</ion-content>
+
