@@ -14,17 +14,15 @@
     	<ion-col></ion-col>
  	</ion-row>
 	<ion-list>
-	  <ion-item class="email" color="dark">
+	  <ion-item class="email" color="dark" no-lines>
 		<ion-input type="email" placeholder="E-mail" [(ngModel)]="data.email"></ion-input>
 	  </ion-item>
-	  <ion-item class="email" color="dark">
+	  <ion-item class="email" color="dark" no-lines>
 		<ion-input type="password" placeholder="Password" [(ngModel)]="data.password"></ion-input>
 	  </ion-item>
 	  <ion-col>
-	  	<b color="light">Belum punya akun ? </b><b color="menjarum" (click)="doRegister()">Daftar disini</b>
+	  	<b color="dark">Belum punya akun ? </b><b color="menjarum" (click)="doRegister()">Daftar disini</b>
 	  </ion-col>
-	  <button ion-button block color="menjarum" type="submit" (click)="doLogin()">Masuk</button>
-	  <button ion-button block clear color="light">Atau</button>
-	  <button ion-button block color="danger" type="submit" (click)="doLogin()">Google+</button>
+	  <button class="buttonLogin" ion-button block color="menjarum" type="submit" (click)="sementaraLogin()">Masuk</button>
 	</ion-list>
 </ion-content>

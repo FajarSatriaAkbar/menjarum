@@ -3,12 +3,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-buttons start>
+    <!-- <ion-buttons start>
       <button ion-button icon-only color="royal" (click)="pencarian()">
         <ion-icon name="md-search"></ion-icon>
       </button>
-    </ion-buttons>
-    <ion-title>Beranda</ion-title>
+    </ion-buttons> -->
+    <ion-title color="menjarum">Beranda</ion-title>
     <ion-buttons end>
       <button ion-button icon-only color="royal" (click)="transaksi()">
         <ion-icon name="md-git-compare"></ion-icon>
@@ -23,54 +23,165 @@
       <img src="{{slide.image}}"/>
     </ion-slide>
   </ion-slides>
-  
-  <ion-card>
-    <img src="assets/icon/home.jpg"/>
-    <div class="card-title">Bingung Cari Penjahit ?</div>
-    <div class="card-subtitle">Kami memiliki 1000 lebih penjahit kota Medan</div>
-    <button outline ion-button class="card-subtitle" id="button" color="menjarum" (click)="mulaiJahit()">Mulai Jahit</button>
-  </ion-card>
 
-  <ion-card>
-    <img src="assets/icon/home.jpg"/>
-    <div class="card-title">Semua Kategori</div>
-    <div class="card-subtitle">Kategori Jahitan menjarum.com</div>
-    <button ion-button outline class="card-subtitle" id="button" color="menjarum" (click)="tampilDesain()">Lihat</button>
-  </ion-card>
+  <ion-row style="height: 80px; width: 100%; margin-bottom: 20px"> 
+     <ion-item no-lines>
+        <ion-scroll scrollX="true" style="height: 80px; width: 100%;">
+          <ion-card>
+              <img src="assets/icon/baju.jpg">
+          </ion-card>
+          <ion-card>
+              <img src="assets/icon/baju.jpg">
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/icon/baju.jpg">
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/icon/baju.jpg">
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/icon/baju.jpg">
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/icon/baju.jpg">
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/icon/baju.jpg">
+            </ion-item>
+          </ion-card>
+       </ion-scroll>
+      </ion-item>
+   </ion-row>
 
-  <!-- <ion-item>
-    <b item-left>Temukan Referensi Jahitmu</b>
-    <button ion-button clear item-right>Selengkapnya</button>
+  <ion-item no-lines class="portopolio">
+    <h2 color="light">KATEGORI</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+        <ion-col col-3 (click)="mulaiJahit()"><img src="assets/icon/baju.jpg"><p>sda</p></ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div>
-          <img src="../../assets/icon/baju.jpg"/>
-          <b>Jas Penuh</b>
-        </div>
 
-        <div>
-          <img src="../../assets/icon/baju.jpg"/>
-          <b>Jas Penuh</b>
-        </div>
+  <ion-row> 
+      <ion-item no-lines>
+        <h3 color="menjarum">Portopolio</h3>
+        <button ion-button item-right outline color="menjarum">Selengkapnya</button>
+      </ion-item>
+     <ion-item no-lines>
+        <ion-scroll scrollX="true" style="height: 80px; width: 100%;">
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+       </ion-scroll>
+      </ion-item>
+   </ion-row>
 
-      </ion-col>
-
-      <ion-col>
-        <div>
-          <img src="../../assets/icon/baju.jpg"/>
-          <b>Jas Penuh</b>
-        </div>
-
-        <div>
-          <img src="../../assets/icon/baju.jpg"/>
-          <b>Jas Penuh</b>
-        </div>
-
-      </ion-col>
-
-    </ion-row>
-  </ion-grid> -->
+   <ion-row> 
+      <ion-item no-lines>
+        <h3 color="menjarum">Penjahit Terdaftar</h3>
+        <button ion-button item-right outline color="menjarum">Selengkapnya</button>
+      </ion-item>
+     <ion-item no-lines>
+        <ion-scroll scrollX="true" style="height: 80px; width: 100%;">
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="#">
+              <p>kjdgfjkds</p>
+            </ion-item>
+          </ion-card>
+       </ion-scroll>
+      </ion-item>
+   </ion-row>
 
 </ion-content>

@@ -11,19 +11,25 @@ import {TransaksiPage} from '../transaksi/transaksi';
 })
 export class Page1 {
 
-  dataSlide = [{image: "assets/icon/home.jpg"},{image: "assets/icon/home.jpg"},{image: "assets/icon/home.jpg"}]
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
-    this.menuCtrl.swipeEnable(false);
-  }
+    dataSlide = [ {image: "assets/icon/home.jpg"},
+                  {image: "assets/icon/home.jpg"},
+                  {image: "assets/icon/home.jpg"}
+                ]
+    constructor(
+      public navCtrl: NavController, 
+      public menuCtrl: MenuController) 
+    {
+      this.menuCtrl.swipeEnable(false);
+    }
 
-  mulaiJahit(){
-  	this.navCtrl.push(DesainPage);
-  }
-  pencarian(){
-  	this.navCtrl.push(PencarianPage);
-  }
-  transaksi(){
-  	this.navCtrl.push(TransaksiPage);
-  }
+    mulaiJahit(){
+    	this.navCtrl.push(DesainPage);
+    }
+    pencarian(){
+    	this.navCtrl.push(PencarianPage);
+    }
+    transaksi(){
+    	this.navCtrl.push(TransaksiPage);
+    }
 
 }

@@ -3,15 +3,44 @@ page-page1 {
 	  	  ion-slides {
 	  	  	height: 30%;
 	  	  }
+	  	  ion-item h2 {
+	  	  	text-align: center;
+	  	  }
 
 	  	  ion-slide img{
 	  	  	height: 50vh !important;
 	  	  	width: auto !important;
 	  	  }
-
+	  	  ion-card img {
+	  	  	width: auto;
+	  	  	height: auto;
+	  	  }
 		  ion-card {
 		    position: relative;
-		    text-align: center;
+		    display: table-cell;
+		  }
+		  ion-row {
+		  	margin-top: 20px;
+		  	margin-bottom: 30px;
+		  }
+		  ion-col img {
+		  	border-radius: 15px;
+		  }
+		  ion-col p {
+		  	text-align: center;
+		  	color: white
+		  }
+
+		  ion-grid {
+		  	height: 100%;
+		  }
+
+		  ion-scroll {
+		  	padding: 10px;
+		    width: 1000px;
+		  }
+		  .portopolio {
+		  	background-color: #FFA500;
 		  }
 
 		  .card-title {

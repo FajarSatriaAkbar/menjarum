@@ -14,19 +14,23 @@ import {PembayaranPage} from '../pembayaran/pembayaran';
   templateUrl: 'transaksi.html'
 })
 export class TransaksiPage {
-  transaksi: string = "pilih1";
-  isAndroid: boolean = false;
+    transaksi: string = "pilih1";
+    isAndroid: boolean = false;
 
-  constructor(public navCtrl: NavController, platform: Platform, public navParams: NavParams) {
-  	this.isAndroid = platform.is('android');
-  }
+    constructor(
+      public navCtrl: NavController, 
+      platform: Platform, 
+      public navParams: NavParams) 
+    {
+    	this.isAndroid = platform.is('android');
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TransaksiPage');
-  }
+    ionViewDidLoad() {
+      console.log('ionViewDidLoad TransaksiPage');
+    }
 
-  konfirmasiPembayaran(){
-  	this.navCtrl.push(PembayaranPage);
-  }
+    konfirmasiPembayaran(){
+    	this.navCtrl.push(PembayaranPage);
+    }
 
 }

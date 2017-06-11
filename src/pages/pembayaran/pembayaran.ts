@@ -12,11 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pembayaran.html'
 })
 export class PembayaranPage {
+	constructor(
+		public navCtrl: NavController, 
+		public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PembayaranPage');
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad PembayaranPage');
+	}
 
 }

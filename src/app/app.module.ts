@@ -11,7 +11,10 @@ import {PembayaranPage} from '../pages/pembayaran/pembayaran';
 import {PencarianPage} from '../pages/pencarian/pencarian';
 import {TransaksiPage} from '../pages/transaksi/transaksi';
 import {AboutPage} from '../pages/about/about';
+import {HargaPage} from '../pages/harga/harga';
 
+
+import {API} from '../providers/api';
 import {ConnectivityService} from '../providers/connectivity-service';
 
 @NgModule({
@@ -25,7 +28,8 @@ import {ConnectivityService} from '../providers/connectivity-service';
     PembayaranPage,
     PencarianPage,
     TransaksiPage,
-    AboutPage
+    AboutPage,
+    HargaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,8 +45,9 @@ import {ConnectivityService} from '../providers/connectivity-service';
     PembayaranPage,
     PencarianPage,
     TransaksiPage,
-    AboutPage
+    AboutPage,
+    HargaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConnectivityService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ConnectivityService, API]
 })
 export class AppModule {}

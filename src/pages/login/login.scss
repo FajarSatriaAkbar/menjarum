@@ -1,10 +1,16 @@
 page-login {
-	ion-content {
-		background-image: url('/assets/icon/back.jpg');
-	}
 	ion-item {
 		opacity: 0.7;
 		border-radius: 5px;
+	}
+
+	ion-row {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.buttonLogin {
+		margin-top: 40px;
 	}
 
 	.email {

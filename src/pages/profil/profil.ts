@@ -12,11 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profil.html'
 })
 export class ProfilPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilPage');
-  }
+	constructor(
+		public navCtrl: NavController, 
+		public navParams: NavParams) {}
+	
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad ProfilPage');
+	}
 
 }

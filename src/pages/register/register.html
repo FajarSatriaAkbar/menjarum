@@ -13,32 +13,32 @@
     	<ion-col></ion-col>
  	</ion-row>
 	<ion-list>
-	  <ion-item class="email" color="dark">
-		<ion-input type="text" placeholder="Nama Lengkap"></ion-input>
+	  <ion-item class="email" color="dark" no-lines>
+		<ion-input type="text" placeholder="Nama Lengkap" [(ngModel)]="data.nama_user"></ion-input>
 	  </ion-item>
-	  <ion-item class="email" color="dark">
-		<ion-input type="email" placeholder="E-mail"></ion-input>
+	  <ion-item class="email" color="dark" no-lines>
+		<ion-input type="email" placeholder="E-mail" [(ngModel)]="data.email"></ion-input>
 	  </ion-item>
-	  <ion-item class="email" color="dark">
-		<ion-input type="password" placeholder="Password"></ion-input>
+	  <ion-item class="email" color="dark" no-lines>
+		<ion-input type="int" placeholder="Nomor Handphone" [(ngModel)]="data.no_telp"></ion-input>
 	  </ion-item>
-	  <ion-item class="email" color="dark">
-		<ion-input type="password" placeholder="Konfirmasi Password"></ion-input>
+	  <ion-item class="email" color="dark" no-lines>
+		<ion-input type="password" placeholder="Password" [(ngModel)]="data.password"></ion-input>
 	  </ion-item>
-	  <ion-list radio-group>
-		  <ion-item class="email">
+	  <ion-list radio-group [(ngModel)]="data.peran">
+		  <ion-item class="email" no-lines>
 		  	<ion-label>Daftar sebagai konsumen</ion-label>
-		  	<ion-radio color="dark" checked="true"></ion-radio>
+		  	<ion-radio color="dark" checked="true" value="konsumen"></ion-radio>
 		  </ion-item>
-		  <ion-item class="email">
+		  <ion-item class="email" no-lines>
 		  	<ion-label>Daftar sebagai penjahit</ion-label>
-		  	<ion-radio color="dark"></ion-radio>
+		  	<ion-radio color="dark" value="penjahit"></ion-radio>
 		  </ion-item>
 	  </ion-list>
 	  <ion-col>
-	  	<b color="light">Sudah punya akun ? </b><b color="menjarum" (click)="doLogin()">Silahkan Login</b>
+	  	<b color="dark">Sudah punya akun ? </b><b color="menjarum" (click)="doLogin()">Silahkan Login</b>
 	  </ion-col>
-	  <button ion-button block color="menjarum" type="submit" (click)="doLogin()">Daftar</button>
+	  <button class="buttonRegister" ion-button block color="menjarum" type="submit" (click)="doRegister()">Daftar</button>
 	  
 	</ion-list>
 </ion-content>

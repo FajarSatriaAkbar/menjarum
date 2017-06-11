@@ -42,7 +42,12 @@ export class DesainPage {
   		this.slider.slideNext();
   	}
 
-  	constructor(public connectivityService: ConnectivityService, public navCtrl: NavController, public navParams: NavParams, platform: Platform) {
+  	constructor(
+      public connectivityService: ConnectivityService, 
+      public navCtrl: NavController, 
+      public navParams: NavParams, 
+      platform: Platform) 
+    {
   		this.isAndroid = platform.is('android');
       this.loadGoogleMaps();
   	}
